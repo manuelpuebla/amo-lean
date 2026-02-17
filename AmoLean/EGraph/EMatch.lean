@@ -1,6 +1,8 @@
 /-
   AMO-Lean: E-Graph E-Matching
 
+  **DEPRECATED**: For new code, use `AmoLean.EGraph.Verified.EMatch` instead.
+
   E-matching: buscar todas las instancias de un patrón en el E-graph.
   Un patrón es como una expresión pero con "variables de patrón" que
   pueden matchear cualquier e-class.
@@ -50,7 +52,7 @@ abbrev Substitution := Std.HashMap PatVarId EClassId
 namespace Substitution
 
 /-- Sustitución vacía -/
-def empty : Substitution := Std.HashMap.empty
+def empty : Substitution := {}
 
 /-- Intentar extender una sustitución con un nuevo binding.
     Falla si la variable ya está asignada a un ID diferente. -/
